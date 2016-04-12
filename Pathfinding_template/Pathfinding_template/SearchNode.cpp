@@ -15,5 +15,5 @@ void SearchNode::resetPrev(SearchNode* prev, float deltaG)
     else
         G = deltaG + prev->G;
 
-    F = H + G;
+    F = H * + G;
 }

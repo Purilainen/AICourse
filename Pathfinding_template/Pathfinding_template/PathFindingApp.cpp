@@ -87,7 +87,7 @@ bool PathFindingApp::update(yam2d::ESContext* ctx, float deltaTime)
 	{
 		// Delete old and load new
 		m_texturePathFound = 0;
-		const char* const inFileName = "tesmi.png";
+		const char* const inFileName = "astar.png";
 
 		char buf[100];
 		sprintf_s(buf, "Start finding path from input image: \"%s\"", inFileName);
@@ -262,7 +262,7 @@ bool PathFindingApp::doPathfinding(int startX, int startY, int endX, int endY)
                 {
                     // If 'T' is not in the open list : Add it and compute its cost.
                     SearchNode* newNode = new SearchNode(adjacentNodes[i],
-                        searchLevel.getH(adjacentNodes[i], endPosition),
+                        searchLevel.getH(adjacentNodes[i], endPosition) * 5, // Heurestic multiplier '5'
                         searchLevel.getG(prevNode, adjacentNodes[i]), prevNode);
 
                     openList.insertToOpenList(newNode);
