@@ -1,0 +1,3 @@
+Start finding path from input image: "tesmi.png"
+Path find done. Time spent 0.286 seconds
+

@@ -7,10 +7,9 @@ SearchNode* OpenList::findFromOpenList(const Position& pos)
         if (openList[i]->pos == pos)
         {
             return openList[i];
-        }  
+        }      
     }
-    return 0;
-    
+    return 0; 
 }
 
 SearchNode* OpenList::removeSmallestFromOpenList()
